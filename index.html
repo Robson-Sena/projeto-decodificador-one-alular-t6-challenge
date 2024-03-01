@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador</title>
+
+</head>
+<body>
+    <header>
+        <img class="logoAlura" src="/Imagens/Logo_Alura.png" alt="Logo da Alura">
+    </header>
+
+    <main>
+        <section>
+            <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+    
+            <div class="informacao">
+                <h6p><img src="Imagens/bi_exclamation.svg" alt="ponto de exclamacao">Apenas letras minúsculas e sem acento!</h6>
+                </div>
+    
+
+    
+            <div class="botoes">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Criptografar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Descriptografar</button>
+        </div>
+        </section>
+    
+        <section class="digitacao">
+            <textarea class="mensagem" cols="20" rows="10"></textarea>
+            <button id="copy" type="button" onclick="btnCopiar()" class="btn-copiar">Copiar</button>
+
+            <p class="conteudo__saida"> <strong>Nenhuma mensagem foi encontrada!</strong></p>
+                <p class="paragrafo"></p>             
+        </section>
+    </main>
+
+    <footer class="Rodape">
+        <p>Desenvolvido por <strong>Robson de Oliveira Sena</strong></p>
+        <a href="https://github.com/Robson-Sena">
+            <img src="Imagens/logo-github.jpg" alt="Perfil do GitHub" width="32"/></a>
+            <a href="https://www.linkedin.com/in/robsonsena-atendimento-ao-cliente">
+                <img src="Imagens/LinkedIn_icon.svg.png" alt="Perfil do Linkedin" width="32"/></a>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

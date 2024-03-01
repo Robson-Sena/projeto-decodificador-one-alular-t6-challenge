@@ -1,0 +1,129 @@
+* {
+    background-color: #E5E5E5;
+    font-family: "Inter" , sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.logoAlura {
+    margin-left: 10px;
+    padding-top: 10px;
+    width: 10%;
+}
+
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.text-area {
+    border: none;
+    color: #0A3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder { color: #0A3871; }
+    .text-area:focus {
+        outline: none;
+}
+
+.mensagem {
+        background: white;
+        background-image: url(/Imagens/boneco_desafio.svg);
+        background-repeat: no-repeat;
+        border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: fixed;
+}
+
+.mensagem:focus {
+        outline: nome;
+}
+
+
+.botoes {
+        display: flex;
+        margin-top: 18px;
+}
+
+.btn-encriptar {
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    height: 67px;
+    width: 320px;
+    cursor: pointer;
+}
+
+.btn-desencriptar {
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    height: 67px;
+    width: 320px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.informacao {
+    color: #495057;
+    height: 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.87rem;
+    margin: 2% 0%;
+    text-align: start;
+}
+
+.btn-copiar {
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 108px;
+    margin-top: 402px;
+    width: 336px;
+    position: absolute;
+}
+
+.digitacao {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 400px; 
+    height: 400px;      
+    border-radius: 32px;
+    background-color: #FFFFFF;
+    color: var(--cinza-secundario);
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-size: 0.94rem;
+    line-height: 100%;
+    margin: 2% 0%;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--cor-de-fundo);
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape {
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    position: unset;
+    bottom: 0;
+    width: 100%;  
+    text-align: center;
+}       
