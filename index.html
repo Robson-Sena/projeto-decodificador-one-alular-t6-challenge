@@ -4,48 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <title>Encriptador</title>
 
 </head>
 <body>
     <header>
-        <img class="logoAlura" src="/Imagens/Logo_Alura.png" alt="Logo da Alura">
+        <img class="logoAlura" src="./assets/Logo_Alura.png" alt="Logo da Alura">
     </header>
 
     <main>
-        <section>
-            <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+        <section class="conteudo__inicial">
+            <textarea class="text-area" cols="41" rows="7" placeholder="Digite seu texto..."></textarea>
     
             <div class="informacao">
-                <h6p><img src="Imagens/bi_exclamation.svg" alt="ponto de exclamacao">Apenas letras minúsculas e sem acento!</h6>
+                <h6p class="informacao__aviso" ><img src="./assets/bi_exclamation.svg" alt="ponto de exclamacao">Apenas letras minúsculas e sem acento!</h6>
                 </div>
-    
-
     
             <div class="botoes">
                 <button class="btn-encriptar" onclick="btnEncriptar()">Criptografar</button>
                 <button class="btn-desencriptar" onclick="btnDesencriptar()">Descriptografar</button>
-        </div>
+            </div>
         </section>
     
-        <section class="digitacao">
-            <textarea class="mensagem" cols="20" rows="10"></textarea>
-            <button id="copy" type="button" onclick="btnCopiar()" class="btn-copiar">Copiar</button>
-
-            <p class="conteudo__saida"> <strong>Nenhuma mensagem foi encontrada!</strong></p>
-                <p class="paragrafo"></p>             
+        <section class="conteudo__resposta"> 
+            <textarea class="mensagem" cols="20" rows="10" placeholder=""></textarea>
+            <div class="conteudo__resposta__div">
+                <h3 class="conteudo__resposta__titulo">Nenhuma mensagem encontrada!</h3>
+                <p class="conteudo__resposta__titulo__texto">Digite o texto que você deseja criptografar ou descriptografar.</p></div>
+                
+        
+            <div class="copy">
+                <button class="btn__copiar" onclick="botaoCopiar()">Copiar</button>
+            </div>
+            
         </section>
     </main>
 
-    <footer class="Rodape">
-        <p>Desenvolvido por <strong>Robson de Oliveira Sena</strong></p>
-        <a href="https://github.com/Robson-Sena">
-            <img src="Imagens/logo-github.jpg" alt="Perfil do GitHub" width="32"/></a>
-            <a href="https://www.linkedin.com/in/robsonsena-atendimento-ao-cliente">
-                <img src="Imagens/LinkedIn_icon.svg.png" alt="Perfil do Linkedin" width="32"/></a>
+    <footer class="rodape">
+        <p>Desenvolvido por Robson Sena</p>
+        <a class="rodape__links__navegacao" href="https://github.com/Robson-Sena"><img src="./assets/github.png">Github</a>
+        <a class="rodape__links__navegacao" href="https://www.linkedin.com/in/robsonsenaassistentedenegocios/"> <img src="./assets/linkedin.png">Linkedin</a>
     </footer>
 
     <script src="script.js"></script>

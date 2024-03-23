@@ -1,24 +1,14 @@
-let area_texto = document.querySelector(".digitacao");
-let resultado = document.querySelector(".conteudo__saida");
-
-function entrada() {
-    if(area_texto != ""){       
-        let texto = document.querySelector(".digitacao")
-        return texto.value
-    }
-}
-
-
 const textArea = document.querySelector(".text-area");
 const mensagem = document.querySelector(".mensagem");
-
 
 function btnEncriptar() {
     const textoEncriptado = encriptar(textArea.value);
     mensagem.value = textoEncriptado;
     textArea.value = "";
-}
 
+    document.querySelector(".conteudo__resposta__div").style.display = 'none';
+    document.querySelector(".conteudo__resposta").style.backgroundImage = 'none';    
+}
 
 function encriptar(stringEncriptada) {
 
@@ -34,11 +24,13 @@ function encriptar(stringEncriptada) {
     return stringEncriptada;
 }
 
-
 function btnDesencriptar() {
     const textoDesencriptado = desencriptar(textArea.value);
     mensagem.value = textoDesencriptado;
     textArea.value = "";
+
+    document.querySelector(".conteudo__resposta__div").style.display = 'none';
+    document.querySelector(".conteudo__resposta").style.backgroundImage = 'none';
 }
 
 function desencriptar(stringDesencriptada) {
@@ -55,18 +47,12 @@ function desencriptar(stringDesencriptada) {
     return stringDesencriptada;
 }
 
-function btnCopiar() {
-    let textToCopy = resultado.textContent
+function botaoCopiar() {
+    
+    navigator.clipboard.writeText(mensagem.value);
+    mensagem.value = "";
+    alert("Texto copiado:" + mensagem.value);
 
-    function afterSuccess() {
-        alert("Texto copiado com sucesso!")
-    }
-}
-
-function afterFailure(error) {
-    alert.error("Falha ao copiar", error)
-} {
-    window.navigator.clipboard
-        .writeText(textToCopy)
-        .then(afterSuccess, afterFailure)
-    }
+    document.querySelector(".conteudo__resposta__div").style.display = 'none';
+    document.querySelector(".conteudo__resposta").style.backgroundImage = 'none';
+}   
