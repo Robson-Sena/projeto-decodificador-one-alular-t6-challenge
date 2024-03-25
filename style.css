@@ -19,6 +19,8 @@
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 100%;
+
+    box-sizing: border-box;
 }
 
 body {
@@ -31,8 +33,9 @@ body {
 }
 
 .logoAlura {
-    margin-left: 3px;
-    padding-top: 3x;
+    margin-top: 70px;
+    margin-left: 5px;
+    padding-top: 5x;
     width: 10%;
 }
 
@@ -43,29 +46,33 @@ main {
     justify-content: space-between;
     gap: 80px;
     margin-bottom: 50px;
-    margin-left: 50px;
-    
+    margin-left: 90px;
 }
 
 .conteudo__inicial {
-    /* height: 100%; */
     width: 50%;
-    display: flexbox;
+    display: flex;
     flex-direction: column;
-    gap: 40px;
-    
-}
+    border-radius: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+    resize: none;
+    padding: 30px;
+  }
 
 .text-area {
     border: none;
     color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-top: 90px;
     text-transform: lowercase;
     outline: none;
     resize: none;
     line-height: 1.25;
     letter-spacing: 1px;
-
+    width: 100%;
 }
 
 ::placeholder { color: var(--cor-secundaria); }
@@ -74,16 +81,14 @@ main {
 }
 
 .informacao {
-    /* width: Hug (252px);
-    height: Hug (18px);
-    top: 851px;
+    /* top: 851px;
     left: 240px;
     gap: 8px; */
     display: contents;
 }
 
 .informacao__aviso {
-    width: 228px;
+    width: 100%;
     height: 18px;
     opacity: 0.8px;
     font-family: var(--fonte-primaria);
@@ -104,8 +109,9 @@ background-color: var(--cor-secundaria);
 border: 1px solid var(--cor-tercearia);
 border-radius: 24px;
 color: var(--cor-primaria);
+font-weight: 600;
 height: 67px;
-width: 320px;
+width: 100%;
 cursor: pointer;
 }
 
@@ -114,14 +120,16 @@ background-color: var(--cor-primaria);
 border: 1px solid var(--cor-tercearia);
 border-radius: 24px;
 color: var(--cor-secundaria);
+font-weight: 600;
 height: 67px;
-width: 320px;
+width: 100%;
 margin-left: 30px;
+margin-right: 60px;
 cursor: pointer;
 }
 
 .conteudo__resposta {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: var(--cor-quartearia);
@@ -136,9 +144,8 @@ cursor: pointer;
     padding: 30px;
     align-items: center;
     resize: none;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 22px 0 rgba(0,0,0,0.19);
 
-    display: block;
+/* gap: 70px; */
 }
 
 .conteudo__resposta:focus {
@@ -146,7 +153,7 @@ cursor: pointer;
 }
 
 .mensagem {   
-    height:100%;
+    height:10%;
     width: 100%;
     border: none;
     background: none;
@@ -156,10 +163,9 @@ cursor: pointer;
     font-family: var(--fonte-primaria);
     font-weight: 400;
     border-radius: 24px;
-    color: var(--cor-primaria);
+    color: var(--cor-quintearia);
     text-align: center;
     margin-top: 30px;
-
     padding: 30px;
     text-transform: lowercase;
 }
@@ -186,12 +192,11 @@ cursor: pointer;
     font-weight: 400;
     text-align: center;
     width: 100%;
-
 }
 
 .copy {
     display: flex;
-    margin-top: 18px;
+    margin-top: 10px;
 }
 
 .btn__copiar {
@@ -202,7 +207,6 @@ cursor: pointer;
     font-weight: 600;
     height: 67px;
     width: 100%;
-    margin-left: 0px; 
     cursor: pointer;
 }
 
@@ -219,9 +223,9 @@ cursor: pointer;
 
 .rodape__links__navegacao {
     display: contents;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 16px;
     align-items: center;   
-    gap: 32px;
     font-family: var(--fonte-primaria);
     font-size: 1.5rem;
     font-weight: 400;
@@ -230,14 +234,10 @@ cursor: pointer;
     width: 50%;
 }
 
-.rodape__links__navegacao:hover {
-    background-color: var(--cor-primaria); 
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     main{
         flex-direction: column;
-        padding: 7%;
+        padding: 7%;    
     }
 
     .conteudo__inicial{
@@ -246,5 +246,8 @@ cursor: pointer;
 
     .conteudo__resposta{
     width: auto;
+    }
+    .rodape{
+        width: auto;
     }
 }
